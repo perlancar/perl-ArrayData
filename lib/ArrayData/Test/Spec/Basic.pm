@@ -31,7 +31,7 @@ sub _elems {
 
 sub get_next_item {
     my $self = shift;
-    die "Out of range" unless $self->{pos} < @$elems;
+    die "StopIteration" unless $self->{pos} < @$elems;
     $elems->[ $self->{pos}++ ];
 }
 
