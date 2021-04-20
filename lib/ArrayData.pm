@@ -15,7 +15,7 @@ Use one of the C<ArrayData::*> modules.
 
 =head1 SPECIFICATION VERSION
 
-0.1
+0.2
 
 
 =head1 DESCRIPTION
