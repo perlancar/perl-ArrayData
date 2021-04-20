@@ -21,7 +21,7 @@ my $elems = [
 
 sub new {
     my $class = shift;
-    bless {index=>0}, $class;
+    bless {pos=>0}, $class;
 }
 
 sub _elems {
@@ -29,26 +29,25 @@ sub _elems {
     $elems;
 }
 
-sub elem {
+sub get_next_item {
     my $self = shift;
-    die "Out of range" unless $self->{index} < @$elems;
-    $elems->[ $self->{index}++ ];
+    die "Out of range" unless $self->{pos} < @$elems;
+    $elems->[ $self->{pos}++ ];
 }
 
-sub get_elem {
+sub has_next_item {
     my $self = shift;
-    return undef unless $self->{index} < @$elems;
-    $elems->[ $self->{index}++ ];
+    $self->{pos} < @$elems;
 }
 
-sub get_iterator_index {
+sub get_iterator_pos {
     my $self = shift;
-    $self->{index};
+    $self->{pos};
 }
 
 sub reset_iterator {
     my $self = shift;
-    $self->{index} = 0;
+    $self->{pos} = 0;
 }
 
 1;
