@@ -23,18 +23,20 @@ Use one of the C<ArrayData::*> modules.
 B<NOTE: EARLY SPECIFICATION; THINGS WILL STILL CHANGE A LOT>.
 
 C<ArrayData::*> modules are modules that contain array data. The array can be
-accessed via a standard interface (see L<ArrayDataRole::Spec::Basic>). Some
-examples of array data are:
+stored in an actual Perl array in the source code, or as lines in the DATA
+section of the source code, or in other places. The array data can be accessed
+via a standard interface (see L<ArrayDataRole::Spec::Basic>). Some examples of
+array data are:
 
 =over
 
-=item * list of country names in English (L<ArrayData::CountryNames::EN>)
+=item * list of country names in English (L<ArrayData::CountryName::EN>)
 
-=item * list of Indonesian words from L<KBBI|https://kbbi.kemdikbud.go.id/> dictionary (L<ArrayData::Words::ID::KBBI>)
+=item * list of Indonesian words from L<KBBI|https://kbbi.kemdikbud.go.id/> dictionary (L<ArrayData::Word::ID::KBBI>)
 
 Also under L<WordList::ID::KBBI>.
 
-=item * list of CPAN authors' PAUSE ID's (L<ArrayData::CPAN::PAUSEIDs>)
+=item * list of CPAN authors' PAUSE ID's (L<ArrayData::CPAN::PAUSEID>)
 
 Also under L<WordList::CPAN::PAUSEID>.
 
@@ -45,10 +47,6 @@ toolchain and infrastructure: 1) ease of installation, update, and
 uninstallation; 2) allowing dependency expression and version comparison; 3)
 ease of packaging further as OS packages, e.g. Debian packages (converted from
 Perl distribution); 4) testing by CPAN Testers.
-
-The array data can actually be stored as Perl array in the Perl module source
-code, or as lines in the DATA section of the Perl module, or in a shared file of
-the distribution.
 
 To get started, see L<ArrayDataRole::Spec::Basic> and one of existing
 C<ArrayData::*> modules.
@@ -78,6 +76,10 @@ These are designed to replace old L<WordList>::* modules.
 =item * C<ArrayData::Phrase::*>
 
 Phrase lists. Designed to replace old C<WordList::Phrase::*> modules.
+
+=item * C<ArrayData::CPAN::*>
+
+Arrays related to CPAN. Designed to replace old C<WordList::Domain::*> modules.
 
 =item * C<ArrayData::Domain::*>
 
