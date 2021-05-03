@@ -13,6 +13,7 @@ requires 'new';
 
 # mixin
 with 'Role::TinyCommons::Iterator::Resettable';
+with 'Role::TinyCommons::Collection::Subscript';
 
 ###
 
@@ -21,16 +22,19 @@ with 'Role::TinyCommons::Iterator::Resettable';
 
 =head1 DESCRIPTION
 
-The basic interface of an ArrayData module is a resettable iterator
-(L<Role::TinyCommons::Iterator::Resettable>). You can call L</reset_iterator> to
-jump to the first element, then call L</get_next_item> repeatedly
-to get elements one at a time until all the elements are retrieved. If you need
-to go back to the first element, you can call L</reset_iterator> again.
+The basic interfaces L<ArrayData> module are a resettable iterator
+(L<Role::TinyCommons::Iterator::Resettable>) as well as a subscriptable
+collection (L<Role::TinyCommons::Collection::Subscript>).
+
+Subscriptable collection interface: You can retrieve an item at a particular
+subscript (index) with L</get_item_at>.
 
 
 =head1 ROLES MIXED IN
 
 L<Role::TinyCommons::Iterator::Resettable>
+
+L<Role::TinyCommons::Collection::Subscript>
 
 
 =head1 REQUIRED METHODS
@@ -52,3 +56,5 @@ No additional provided methods.
 =head1 SEE ALSO
 
 L<Role::TinyCommons::Iterator::Resettable>
+
+L<Role::TinyCommons::Collection::Subscript>
