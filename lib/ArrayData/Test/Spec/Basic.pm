@@ -50,6 +50,25 @@ sub reset_iterator {
     $self->{pos} = 0;
 }
 
+sub get_item_at_pos {
+    my ($self, $pos) = @_;
+    if ($pos < 0) {
+        die "Out of range" unless -$pos <= @$elems;
+    } else {
+        die "Out of range" unless $pos < @$elems;
+    }
+    $elems->[ $pos ];
+}
+
+sub has_item_at_pos {
+    my ($self, $pos) = @_;
+    if ($pos < 0) {
+        return -$pos <= @$elems ? 1:0;
+    } else {
+        return $pos < @$elems ? 1:0;
+    }
+}
+
 1;
 
 # ABSTRACT: A test table data

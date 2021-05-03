@@ -13,7 +13,7 @@ requires 'new';
 
 # mixin
 with 'Role::TinyCommons::Iterator::Resettable';
-with 'Role::TinyCommons::Collection::Subscript';
+with 'Role::TinyCommons::Collection::GetItemByPos';
 
 ###
 
@@ -22,19 +22,17 @@ with 'Role::TinyCommons::Collection::Subscript';
 
 =head1 DESCRIPTION
 
-The basic interfaces L<ArrayData> module are a resettable iterator
-(L<Role::TinyCommons::Iterator::Resettable>) as well as a subscriptable
-collection (L<Role::TinyCommons::Collection::Subscript>).
-
-Subscriptable collection interface: You can retrieve an item at a particular
-subscript (index) with L</get_item_at>.
+L<ArrayData>::* modules let you iterate elements using a resettable iterator
+interface (L<Role::TinyCommons::Iterator::Resettable>) as well as get elements
+by position (L<Role::TinyCommons::Collection::GetItemByPos>), like what a
+regular Perl array lets you.
 
 
 =head1 ROLES MIXED IN
 
 L<Role::TinyCommons::Iterator::Resettable>
 
-L<Role::TinyCommons::Collection::Subscript>
+L<Role::TinyCommons::Collection::GetItemByPos>
 
 
 =head1 REQUIRED METHODS
@@ -47,14 +45,34 @@ Usage:
 
 Constructor. Must accept a pair of argument names and values.
 
+=head2 get_next_item
+
+From L<Role::TinyCommons::Iterator::Resettable>.
+
+=head2 has_next_item
+
+From L<Role::TinyCommons::Iterator::Resettable>.
+
+=head2 reset_iterator
+
+From L<Role::TinyCommons::Iterator::Resettable>.
+
+=head2 get_item_at_pos
+
+From L<Role::TinyCommons::Iterator::GetItemByPos>.
+
+=head2 has_item_at_pos
+
+From L<Role::TinyCommons::Iterator::GetItemByPos>.
+
 
 =head1 PROVIDED METHODS
 
-No additional provided methods.
+No additional provided methods. See from mixed-in roles.
 
 
 =head1 SEE ALSO
 
 L<Role::TinyCommons::Iterator::Resettable>
 
-L<Role::TinyCommons::Collection::Subscript>
+L<Role::TinyCommons::Collection::GetItemByPos>
