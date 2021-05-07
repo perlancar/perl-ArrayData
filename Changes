@@ -1,3 +1,8 @@
+0.2.2   2021-05-07  Released-By: PERLANCAR; Urgency: medium
+
+	- ArrayDataRole::Spec::Basic: provide method apply_roles().
+
+
 0.2.1   2021-05-03  Released-By: PERLANCAR; Urgency: medium
 
 	- Mix Role::TinyCommons::Collection::GetItemByPos into
