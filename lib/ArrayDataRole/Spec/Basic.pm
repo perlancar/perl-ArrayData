@@ -88,6 +88,10 @@ a shortcut for:
 
  Role::Tiny->apply_roles_to_object($obj, 'ArrayDataRole::R1', ...);
 
+Return the object, so you can do something like this:
+
+ my $obj = ArrayData::Word::ID::KBBI->new->apply_roles('BinarySearch::LinesInHandle');
+
 
 =head1 SEE ALSO
 
