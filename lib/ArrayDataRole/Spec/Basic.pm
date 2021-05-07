@@ -15,6 +15,15 @@ requires 'new';
 with 'Role::TinyCommons::Iterator::Resettable';
 with 'Role::TinyCommons::Collection::GetItemByPos';
 
+# provides
+
+sub apply_roles {
+    my ($obj, @ad_roles) = @_;
+    Role::Tiny->apply_roles_to_object(
+        $obj, map { "ArrayDataRole::$_" } @ad_roles);
+    $obj;
+}
+
 ###
 
 1;
@@ -68,7 +77,16 @@ From L<Role::TinyCommons::Iterator::GetItemByPos>.
 
 =head1 PROVIDED METHODS
 
-No additional provided methods. See from mixed-in roles.
+=head2 apply_roles
+
+Usage:
+
+ $obj->apply_roles('R1', ...)
+
+Apply ArrayDataRole::* roles (ArrayDataRole::R1, ...) to object. It's basically
+a shortcut for:
+
+ Role::Tiny->apply_roles_to_object($obj, 'ArrayDataRole::R1', ...);
 
 
 =head1 SEE ALSO
