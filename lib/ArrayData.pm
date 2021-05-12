@@ -54,10 +54,11 @@ C<ArrayData::*> modules.
 
 =head1 NAMESPACE ORGANIZATION
 
+=head2 ArrayData
+
 C<ArrayData> (this module) is the specification.
 
-All the modules under C<ArrayData::*> should be modules with actual data (base
-classes should be put in C<ArrayDataBase::*>, roles in C<ArrayDataRole::*>).
+All the modules under C<ArrayData::*> should be modules with actual data.
 
 More specific subnamespaces for more specific types of elements:
 
@@ -101,14 +102,40 @@ Passwords. Designed to replace old C<WordList::HTTP::*> modules.
 
 =back
 
-C<ArrayDataBase::*> the base classes. C<ArrayDataBases::*> are main module names
-for distributions that bundle multiple base classes.
-
-C<ArrayDataRole::*> the roles. C<ArrayDataRoles::*> are main module names for
-distributions that bundle multiple roles.
+=head2 ArrayDataBundle
 
 C<ArrayDataBundle::*> are main module names for distributions that contain
 several C<ArrayData> modules.
+
+=head2 ArrayDataBase
+
+C<ArrayDataBase::*> are the base classes. C<ArrayDataBases::*> are main module
+names for distributions that bundle multiple base classes. Since ArrayData is
+largely role-based, it is expected that we do not have many of these base
+classes.
+
+=head2 ArrayDataBases
+
+C<ArrayDataBases::*> are main module names for distributions that bundle
+multiple base classes.
+
+=head2 ArrayDataRole
+
+C<ArrayDataRole::*> are the roles.
+
+=head2 ArrayDataRoles
+
+C<ArrayDataRoles::*> are main module names for distributions that bundle
+multiple roles.
+
+=head2 ArrayDataUtil
+
+C<ArrayDataRole::*> are for other utility modules related to ArrayData.
+
+=head2 ArrayDataUtils
+
+C<ArrayDataUtils::*> are main module names for distributions that bundle
+multiple C<ArrayDataUtil::*> modules.
 
 
 =head1 FAQ
