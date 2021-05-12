@@ -1,3 +1,10 @@
+0.2.2   2021-05-12  Released-By: PERLANCAR; Urgency: low
+
+	- No spec changes.
+
+	- Introduce ArrayDataUtil::* namespace.
+
+
 0.2.1   2021-05-03  Released-By: PERLANCAR; Urgency: medium
 
 	- Mix Role::TinyCommons::Collection::GetItemByPos into
