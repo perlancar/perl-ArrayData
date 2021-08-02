@@ -2,3 +2,4 @@ ArrayData-*
 .build
 *~
 nytprof*
+.DS_Store
