@@ -1,12 +1,15 @@
 package ArrayDataRole::Spec::Basic;
 
+use strict;
+use warnings;
+
+use Role::Tiny;
+use Role::Tiny::With;
+
 # AUTHORITY
 # DATE
 # DIST
 # VERSION
-
-use Role::Tiny;
-use Role::Tiny::With;
 
 # constructor
 requires 'new';

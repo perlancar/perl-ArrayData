@@ -1,16 +1,16 @@
 package ArrayData::Test::Spec::Basic;
 
-# AUTHORITY
-# DATE
-# DIST
-# VERSION
-
 use strict;
 use warnings;
 
 use Role::Tiny::With;
 
 with 'ArrayDataRole::Spec::Basic';
+
+# AUTHORITY
+# DATE
+# DIST
+# VERSION
 
 my $elems = [
     1,

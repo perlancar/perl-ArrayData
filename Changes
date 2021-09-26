@@ -1,3 +1,11 @@
+0.2.3   2021-09-26  Released-By: PERLANCAR; Urgency: high
+
+        - Merge releases 0.2.2 and 0.2.2.3.
+
+	- Tweak recommended subnamespaces: Word::* -> Lingua::Word::*,
+	  Phrase::* -> Lingua::Phrase::*; fix some copy-pasted typos.
+
+
 0.2.2.2  2021-05-12  Released-By: PERLANCAR; Urgency: low
 
 	- No spec changes.
