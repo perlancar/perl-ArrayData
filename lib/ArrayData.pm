@@ -1,3 +1,5 @@
+# no code
+## no critic: TestingAndDebugging::RequireUseStrict
 package ArrayData;
 
 # AUTHORITY
@@ -32,7 +34,7 @@ array data are:
 
 =item * list of country names in English (L<ArrayData::CountryName::EN>)
 
-=item * list of Indonesian words from L<KBBI|https://kbbi.kemdikbud.go.id/> dictionary (L<ArrayData::Word::ID::KBBI>)
+=item * list of Indonesian words from L<KBBI|https://kbbi.kemdikbud.go.id/> dictionary (L<ArrayData::Lingua::Word::ID::KBBI>)
 
 Also under L<WordList::ID::KBBI>.
 
@@ -60,27 +62,34 @@ C<ArrayData> (this module) is the specification.
 
 All the modules under C<ArrayData::*> should be modules with actual data.
 
-More specific subnamespaces for more specific types of elements:
+More specific subnamespaces for more specific topics and/or types of elements:
 
 =over
 
-=item * C<ArrayData::String::*>
+=item * C<ArrayData::Lingua::*>
 
-Strings. (But please see other more specific names.)
+See also: C<TableData::Lingua::*>.
 
-=item * C<ArrayData::Word::*>
+=item * C<ArrayData::Lingua::Word::*>
 
 Dictionary word lists (further classified as (further classified in
-C<ArrayData::Word::>I<LanguageCode>C<::*> e.g. L<ArrayData::Word::ID::KBBI>).
-These are designed to replace old L<WordList>::* modules.
+C<ArrayData::Lingua::Word::>I<LanguageCode>C<::*> e.g.
+L<ArrayData::Lingua::Word::ID::KBBI>). These are designed to replace old
+L<WordList>::* modules.
 
-=item * C<ArrayData::Phrase::*>
+See also: C<TableData::Lingua::Word::*>.
+
+=item * C<ArrayData::Lingua::Phrase::*>
 
 Phrase lists. Designed to replace old C<WordList::Phrase::*> modules.
 
+See also: C<TableData::Lingua::Phrase::*>.
+
 =item * C<ArrayData::CPAN::*>
 
-Arrays related to CPAN. Designed to replace old C<WordList::Domain::*> modules.
+Arrays related to CPAN. Designed to replace old C<WordList::CPAN::*> modules.
+
+See also: C<TableData::CPAN::*>.
 
 =item * C<ArrayData::Domain::*>
 
@@ -98,7 +107,7 @@ Numbers.
 
 =item * C<ArrayData::Password::*>
 
-Passwords. Designed to replace old C<WordList::HTTP::*> modules.
+Passwords. Designed to replace old C<WordList::Password::*> modules.
 
 =back
 
