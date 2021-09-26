@@ -5,6 +5,17 @@
 	- Tweak recommended subnamespaces: Word::* -> Lingua::Word::*,
 	  Phrase::* -> Lingua::Phrase::*; fix some copy-pasted typos.
 
+        - UPDATE: Rename release 0.2.3 to 0.2.3.2 due to conflict.
+
+
+0.2.3   2021-05-18  Released-By: PERLANCAR; Urgency: medium
+
+	- [ux] apply_roles(): Search also Role::TinyCommons::Collection
+	  namespace, throw an error if a specified role cannot be found in
+	  any namespace.
+
+	- [doc] Add example for apply_roles().
+
 
 0.2.2.2  2021-05-12  Released-By: PERLANCAR; Urgency: low
 

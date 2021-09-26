@@ -71,6 +71,6 @@ sub has_item_at_pos {
 
 1;
 
-# ABSTRACT: A test table data
+# ABSTRACT: A test array data
 
 =for Pod::Coverage ^(.+)$
