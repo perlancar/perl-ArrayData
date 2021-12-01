@@ -93,11 +93,11 @@ From L<Role::TinyCommons::Iterator::Resettable>.
 
 =head2 get_item_at_pos
 
-From L<Role::TinyCommons::Iterator::GetItemByPos>.
+From L<Role::TinyCommons::Collection::GetItemByPos>.
 
 =head2 has_item_at_pos
 
-From L<Role::TinyCommons::Iterator::GetItemByPos>.
+From L<Role::TinyCommons::Collection::GetItemByPos>.
 
 
 =head1 PROVIDED METHODS
